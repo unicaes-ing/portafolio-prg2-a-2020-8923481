@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practica1
+namespace Practica2
 {
-    public partial class Form1 : Form
+    public partial class Ejercicio3 : Form
     {
-        public Form1()
+        public Ejercicio3()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
