@@ -30,18 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtConver = new System.Windows.Forms.TextBox();
             this.btnConvertir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.chkPulgadas = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdoPulgadas = new System.Windows.Forms.RadioButton();
+            this.rdoPies = new System.Windows.Forms.RadioButton();
+            this.rdoYardas = new System.Windows.Forms.RadioButton();
+            this.rdoPulgadas1 = new System.Windows.Forms.RadioButton();
+            this.rdoPies2 = new System.Windows.Forms.RadioButton();
+            this.rdoYardas3 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,30 +61,6 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 20);
             this.txtNumero.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.chkPulgadas);
-            this.groupBox1.Location = new System.Drawing.Point(56, 130);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "De:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.checkBox6);
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Location = new System.Drawing.Point(324, 130);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "A:";
             // 
             // label2
             // 
@@ -111,6 +87,7 @@
             this.btnConvertir.TabIndex = 6;
             this.btnConvertir.Text = "Convertir";
             this.btnConvertir.UseVisualStyleBackColor = true;
+            this.btnConvertir.Click += new System.EventHandler(this.btnConvertir_Click);
             // 
             // btnSalir
             // 
@@ -121,65 +98,95 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // chkPulgadas
+            // groupBox1
             // 
-            this.chkPulgadas.AutoSize = true;
-            this.chkPulgadas.Location = new System.Drawing.Point(7, 20);
-            this.chkPulgadas.Name = "chkPulgadas";
-            this.chkPulgadas.Size = new System.Drawing.Size(70, 17);
-            this.chkPulgadas.TabIndex = 0;
-            this.chkPulgadas.Text = "Pulgadas";
-            this.chkPulgadas.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.rdoYardas);
+            this.groupBox1.Controls.Add(this.rdoPies);
+            this.groupBox1.Controls.Add(this.rdoPulgadas);
+            this.groupBox1.Location = new System.Drawing.Point(60, 130);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(196, 100);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "De:";
             // 
-            // checkBox2
+            // groupBox2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 44);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.rdoYardas3);
+            this.groupBox2.Controls.Add(this.rdoPies2);
+            this.groupBox2.Controls.Add(this.rdoPulgadas1);
+            this.groupBox2.Location = new System.Drawing.Point(324, 130);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "A:";
             // 
-            // checkBox3
+            // rdoPulgadas
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 68);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.rdoPulgadas.AutoSize = true;
+            this.rdoPulgadas.Location = new System.Drawing.Point(19, 19);
+            this.rdoPulgadas.Name = "rdoPulgadas";
+            this.rdoPulgadas.Size = new System.Drawing.Size(69, 17);
+            this.rdoPulgadas.TabIndex = 8;
+            this.rdoPulgadas.TabStop = true;
+            this.rdoPulgadas.Text = "Pulgadas";
+            this.rdoPulgadas.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // rdoPies
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(6, 19);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 0;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.rdoPies.AutoSize = true;
+            this.rdoPies.Location = new System.Drawing.Point(19, 48);
+            this.rdoPies.Name = "rdoPies";
+            this.rdoPies.Size = new System.Drawing.Size(45, 17);
+            this.rdoPies.TabIndex = 9;
+            this.rdoPies.TabStop = true;
+            this.rdoPies.Text = "Pies";
+            this.rdoPies.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // rdoYardas
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(6, 43);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 1;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.rdoYardas.AutoSize = true;
+            this.rdoYardas.Location = new System.Drawing.Point(19, 77);
+            this.rdoYardas.Name = "rdoYardas";
+            this.rdoYardas.Size = new System.Drawing.Size(58, 17);
+            this.rdoYardas.TabIndex = 10;
+            this.rdoYardas.TabStop = true;
+            this.rdoYardas.Text = "Yardas";
+            this.rdoYardas.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // rdoPulgadas1
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(6, 67);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
-            this.checkBox6.TabIndex = 2;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.rdoPulgadas1.AutoSize = true;
+            this.rdoPulgadas1.Location = new System.Drawing.Point(29, 19);
+            this.rdoPulgadas1.Name = "rdoPulgadas1";
+            this.rdoPulgadas1.Size = new System.Drawing.Size(69, 17);
+            this.rdoPulgadas1.TabIndex = 0;
+            this.rdoPulgadas1.TabStop = true;
+            this.rdoPulgadas1.Text = "Pulgadas";
+            this.rdoPulgadas1.UseVisualStyleBackColor = true;
+            // 
+            // rdoPies2
+            // 
+            this.rdoPies2.AutoSize = true;
+            this.rdoPies2.Location = new System.Drawing.Point(29, 48);
+            this.rdoPies2.Name = "rdoPies2";
+            this.rdoPies2.Size = new System.Drawing.Size(45, 17);
+            this.rdoPies2.TabIndex = 1;
+            this.rdoPies2.TabStop = true;
+            this.rdoPies2.Text = "Pies";
+            this.rdoPies2.UseVisualStyleBackColor = true;
+            // 
+            // rdoYardas3
+            // 
+            this.rdoYardas3.AutoSize = true;
+            this.rdoYardas3.Location = new System.Drawing.Point(29, 77);
+            this.rdoYardas3.Name = "rdoYardas3";
+            this.rdoYardas3.Size = new System.Drawing.Size(58, 17);
+            this.rdoYardas3.TabIndex = 2;
+            this.rdoYardas3.TabStop = true;
+            this.rdoYardas3.Text = "Yardas";
+            this.rdoYardas3.UseVisualStyleBackColor = true;
             // 
             // Ejercicio3
             // 
@@ -209,17 +216,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtConver;
         private System.Windows.Forms.Button btnConvertir;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox chkPulgadas;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdoYardas;
+        private System.Windows.Forms.RadioButton rdoPies;
+        private System.Windows.Forms.RadioButton rdoPulgadas;
+        private System.Windows.Forms.RadioButton rdoYardas3;
+        private System.Windows.Forms.RadioButton rdoPies2;
+        private System.Windows.Forms.RadioButton rdoPulgadas1;
     }
 }

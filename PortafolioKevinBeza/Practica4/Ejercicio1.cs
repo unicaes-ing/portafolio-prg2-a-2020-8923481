@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Practica4
+{
+    public partial class Ejercicio1 : Form
+    {
+        public Ejercicio1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSumar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double num1 = Convert.ToDouble(txtNum1.Text);
+                double num2 = Convert.ToDouble(txtNum2.Text);
+                double num3 = Convert.ToDouble(txtNum3.Text);
+                double num4 = Convert.ToDouble(txtNum4.Text);
+                lblSuma.Text = "Suma = " + Sumar(num1, num2, num3, num4).ToString();
+                txtNum1.Clear();
+                txtNum2.Clear();
+                txtNum3.Clear();
+                txtNum4.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Ingrese 4 números");
+            }
+        }
+
+        public static double Sumar(double num1, double num2, double num3, double num4)
+        {
+            return num1 + num2 + num3 + num4;
+        }
+
+        private void Ejercicio1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
